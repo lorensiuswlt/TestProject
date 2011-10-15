@@ -110,7 +110,7 @@ Contributors
 Changes
 =======
 
-__2011-10-15__:
+### 2011-10-15:
 * Fix 'container moves' bug that addressed in this [issue](https://github.com/lorensiuswlt/NewQuickAction3D/issues/1). Thanx to [The Vaan](TheVaan@gmail.com) for giving me the clue.
 2. New improvements added by [Kevin Pack](kevinpeck@gmail.com):
   3. Action Item – new constructor with action id, title, icon
@@ -124,5 +124,5 @@ __2011-10-15__:
   11. Updated NewQuickAction3DActivity to show the toast message based on label of action item clicked as you now have enough info in callback to do that generically
   12. Update sample code to show sticky items in action, watching for dismiss action and extra menu items 
 
-__2011-10-05__:
+### 2011-10-05:
 * Fix force close that occured when tapping randomly on a view to show QuickAction dialog ([issue](https://github.com/lorensiuswlt/NewQuickAction3D/issues/2)). Thanx to [Zammbi](zammbi@gmail.com) for bug fix..
