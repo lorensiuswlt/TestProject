@@ -96,6 +96,7 @@ This repo includes a sample Activity (__ExampleActivity.java__) to show how to u
 **See http://www.londatiga.net/it/how-to-create-quickaction-dialog-in-android/ for more information.**
 
 ![Example Image](http://londatiga.net/images/quickaction3d_horizontal.png) 
+
 ![Example Image](http://londatiga.net/images/quickaction3d_vertical.png) 
 
 Developed By
@@ -124,6 +125,7 @@ Changes
   10. Added horiz_separator.xml file so you can show a separator between items in a horizontal layout
   11. Updated NewQuickAction3DActivity to show the toast message based on label of action item clicked as you now have enough info in callback to do that generically
   12. Update sample code to show sticky items in action, watching for dismiss action and extra menu items 
+3. New listener to handle on dismiss event.
 
 ### 2011-10-05:
-* Fix force close that occured when tapping randomly on a view to show QuickAction dialog ([issue](https://github.com/lorensiuswlt/NewQuickAction3D/issues/2)). Thanx to [Zammbi](zammbi@gmail.com) for bug fix..
+* Fix force close that occured when tapping randomly on a view to show QuickAction dialog ([issue](https://github.com/lorensiuswlt/NewQuickAction3D/issues/2)). Thanx to [Zammbi](zammbi@gmail.com) for bug fixing..
