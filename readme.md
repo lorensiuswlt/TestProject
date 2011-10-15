@@ -95,9 +95,7 @@ This repo includes a sample Activity (__ExampleActivity.java__) to show how to u
 
 **See http://www.londatiga.net/it/how-to-create-quickaction-dialog-in-android/ for more information.**
 
-![Example Image](http://londatiga.net/images/quickaction3d_horizontal.png) 
-
-![Example Image](http://londatiga.net/images/quickaction3d_vertical.png) 
+![Example Image](http://londatiga.net/images/quickaction3d_horizontal.png)  ![Example Image](http://londatiga.net/images/quickaction3d_vertical.png) 
 
 Developed By
 ============
