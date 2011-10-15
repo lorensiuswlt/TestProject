@@ -111,7 +111,7 @@ Changes
 
 #### 2011-10-15:
 * Fix 'container moves' bug that addressed in this [issue][3]. Thanx to The Vaan <TheVaan@gmail.com> for giving me the clue.
-* New improvements added by Kevin Pack:
+1. New improvements added by Kevin Pack:
 1. Action Item – new constructor with action id, title, icon
 2. Callback enhanced to return QuickAction object as source and action id (allows you to add items in any order as you base what was clicked on by the ID, not the pos)
 3. Action item supports sticky mode, if that is enabled the menu does not dismiss post button press. I needed this for my application.
