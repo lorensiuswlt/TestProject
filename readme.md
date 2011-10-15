@@ -104,10 +104,12 @@ Developed By
 
 Contributors
 ============
+
 * Kevin Peck - <kevinwpeck@gmail.com>
 
 Changes
 =======
+
 __2011-10-15__:
 * Fix 'container moves' bug that addressed in this [issue](https://github.com/lorensiuswlt/NewQuickAction3D/issues/1). Thanx to [The Vaan](TheVaan@gmail.com) for giving me the clue.
 2. New improvements added by [Kevin Pack](kevinpeck@gmail.com):
