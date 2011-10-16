@@ -110,7 +110,7 @@ Contributors
 Changes
 =======
 
-See [CHANGELOG.md](https://github.com/lorensiuswlt/NewQuickAction3D/blob/master/readme.md) for details
+See [CHANGELOG](https://github.com/lorensiuswlt/NewQuickAction3D/blob/master/CHANGELOG.md) for details
 
 License
 =======

@@ -4,7 +4,7 @@ Change Log
 Version 1.0.1 *(2011-10-16)*
 ---------------------------
 * Improve sample code *(ExampleActivity.java)*
-* Add *Apache License, Version 2.0* to this source code (see LICENSE.txt)
+* Add __Apache License, Version 2.0__ to this source code (see LICENSE.txt)
 
 Version 1.0.0 *(2011-10-15)*
 ----------------------------
