@@ -1,93 +1,71 @@
-NewQuickAction3D
-================
+NewQuickAction
+==============
 
-NewQuickAction3D is a small android library to create QuickAction dialog with Gallery3D app style.
+NewQuickAction is a small android library to create QuickAction dialog.
 
 How to Use
 ==========
-This repo includes a sample Activity (__ExampleActivity.java__) to show how to use QuickAction.
+This repo includes a sample Activity (__ExampleActivity1.java__) to show how to use QuickAction.
 
-	public class ExampleActivity extends Activity {
-		//action id
-		private static final int ID_UP     = 1;
-		private static final int ID_DOWN   = 2;
-		private static final int ID_SEARCH = 3;
-		private static final int ID_INFO   = 4;
-		private static final int ID_ERASE  = 5;	
-		private static final int ID_OK     = 6;
-	    
+	public class Example1Activity extends Activity {
+		private static final int ID_ADD = 1;
+		private static final int ID_ACCEPT = 2;
+		private static final int ID_UPLOAD = 3;
+	
 		@Override
-		public void onCreate(Bundle savedInstanceState) {
+		protected void onCreate(Bundle savedInstanceState) {
 			super.onCreate(savedInstanceState);
-
-			setContentView(R.layout.main);
-
-			ActionItem nextItem 	= new ActionItem(ID_DOWN, "Next", getResources().getDrawable(R.drawable.menu_down_arrow));
-			ActionItem prevItem 	= new ActionItem(ID_UP, "Prev", getResources().getDrawable(R.drawable.menu_up_arrow));
-        	ActionItem searchItem 	= new ActionItem(ID_SEARCH, "Find", getResources().getDrawable(R.drawable.menu_search));
-        	ActionItem infoItem 	= new ActionItem(ID_INFO, "Info", getResources().getDrawable(R.drawable.menu_info));
-        	ActionItem eraseItem 	= new ActionItem(ID_ERASE, "Clear", getResources().getDrawable(R.drawable.menu_eraser));
-        	ActionItem okItem 		= new ActionItem(ID_OK, "OK", getResources().getDrawable(R.drawable.menu_ok));
-        
+		
+			setContentView(R.layout.example1);
+		
+			ActionItem addItem 		= new ActionItem(ID_ADD, "Add", getResources().getDrawable(R.drawable.ic_add));
+			ActionItem acceptItem 	= new ActionItem(ID_ACCEPT, "Accept", getResources().getDrawable(R.drawable.ic_accept));
+        	ActionItem uploadItem 	= new ActionItem(ID_UPLOAD, "Upload", getResources().getDrawable(R.drawable.ic_up));
+       
         	//use setSticky(true) to disable QuickAction dialog being dismissed after an item is clicked
-        	prevItem.setSticky(true);
-        	nextItem.setSticky(true);
-		
-			//create QuickAction. Use QuickAction.VERTICAL or QuickAction.HORIZONTAL param to define layout 
-        	//orientation
-			final QuickAction quickAction = new QuickAction(this, QuickAction.VERTICAL);
-		
-			//add action items into QuickAction
-        	quickAction.addActionItem(nextItem);
-			quickAction.addActionItem(prevItem);
-        	quickAction.addActionItem(searchItem);
-        	quickAction.addActionItem(infoItem);
-        	quickAction.addActionItem(eraseItem);
-        	quickAction.addActionItem(okItem);
+        	uploadItem.setSticky(true);
         
-        	//Set listener for action item clicked
-			quickAction.setOnActionItemClickListener(new QuickAction.OnActionItemClickListener() {			
+			final QuickAction mQuickAction 	= new QuickAction(this);
+		
+			mQuickAction.addActionItem(addItem);
+			mQuickAction.addActionItem(acceptItem);
+			mQuickAction.addActionItem(uploadItem);
+		
+			//setup the action item click listener
+			mQuickAction.setOnActionItemClickListener(new QuickAction.OnActionItemClickListener() {
 				@Override
-				public void onItemClick(QuickAction source, int pos, int actionId) {
-					//here we can filter which action item was clicked with pos or actionId parameter
+				public void onItemClick(QuickAction quickAction, int pos, int actionId) {
 					ActionItem actionItem = quickAction.getActionItem(pos);
-                 
-					Toast.makeText(getApplicationContext(), actionItem.getTitle() + " selected", Toast.LENGTH_SHORT).show();			    
+				
+					if (actionId == ID_ADD) {
+						Toast.makeText(getApplicationContext(), "Add item selected", Toast.LENGTH_SHORT).show();
+					} else {
+						Toast.makeText(getApplicationContext(), actionItem.getTitle() + " selected", Toast.LENGTH_SHORT).show();
+					}
 				}
 			});
 		
-			//set listnener for on dismiss event, this listener will be called only if QuickAction dialog was dismissed
-			//by clicking the area outside the dialog.
-			quickAction.setOnDismissListener(new QuickAction.OnDismissListener() {			
+			mQuickAction.setOnDismissListener(new QuickAction.OnDismissListener() {
 				@Override
 				public void onDismiss() {
-					Toast.makeText(getApplicationContext(), "Dismissed", Toast.LENGTH_SHORT).show();
+					Toast.makeText(getApplicationContext(), "Ups..dismissed", Toast.LENGTH_SHORT).show();
 				}
 			});
 		
-			//show on btn1
 			Button btn1 = (Button) this.findViewById(R.id.btn1);
 			btn1.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					quickAction.show(v);
+					mQuickAction.show(v);
 				}
-			});
+			})
 
 			Button btn2 = (Button) this.findViewById(R.id.btn2);
 			btn2.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					quickAction.show(v);
-				}
-			});
-		
-			Button btn3 = (Button) this.findViewById(R.id.btn3);
-			btn3.setOnClickListener(new OnClickListener() {
-				@Override
-				public void onClick(View v) {
-					quickAction.show(v);
-					quickAction.setAnimStyle(QuickAction.ANIM_REFLECT);
+					mQuickAction.show(v);
+					mQuickAction.setAnimStyle(QuickAction.ANIM_GROW_FROM_CENTER);
 				}
 			});
 		}
@@ -95,7 +73,7 @@ This repo includes a sample Activity (__ExampleActivity.java__) to show how to u
 
 **See http://www.londatiga.net/it/how-to-create-quickaction-dialog-in-android/ for more information.**
 
-![Example Image](http://londatiga.net/images/quickaction3d_horizontal.png)  ![Example Image](http://londatiga.net/images/quickaction3d_vertical.png) 
+![Example Image](http://londatiga.net/images/quickaction1.png)  ![Example Image](http://londatiga.net/images/quickaction2.png) 
 
 Developed By
 ============
